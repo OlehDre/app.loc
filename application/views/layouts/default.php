@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/styles/main.css">
     <title><?php echo $title; ?></title>
+    <script src="/public/scripts/jquery.js"></script>
+    <script src="/public/scripts/form.js"></script>
 </head>
 <body>
 
@@ -19,16 +21,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/addEmployer.html">addNewEmployer</a>
+                        <a class="nav-link" href="/add/user">add User</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/depts.html">Depts</a>
+                        <a class="nav-link" href="/depts">Departments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/allEmployers.html">AllEmployers</a>
+                        <a class="nav-link" href="/users">All Users</a>
                     </li>
                 </ul>
             </div>

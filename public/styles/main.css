@@ -1,0 +1,92 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+body{
+	background: #222;
+}
+
+main{
+	padding-top: 50px;
+}
+
+option{
+	color: #000;
+}
+
+
+/* ADDEMPLOYER */
+
+.formbox{
+	margin-top: 25px;
+	width: 40%;
+	margin: 0 auto;
+}
+
+.formbox button{
+	margin-top: 20px;
+}
+
+/* ALLEMPLOYERS */
+
+.employer{
+	display: block;
+	padding: 15px;
+	cursor: pointer;
+	border-radius: 10px;
+	transition: background .3s ease-out;
+	margin-top: 5px;
+	text-decoration: none;
+}
+
+.employer:hover{
+	background: #02dbb7;
+	color: #000;
+}
+
+.employer span{
+	font-size: 1.2em;
+	font-weight: bold;
+	text-shadow: 1px 1px 5px #000;
+}
+
+
+/* DEPTS */
+
+.dept{
+	width: 30%;
+	padding: 20px;
+	background: #181818;
+	border-radius: 5px;
+}
+
+.deptForm{
+	margin: 0 auto;
+	width: 30%;
+}
+
+.allDepts{
+	margin: 0 auto;
+	width: 100%;
+}
+
+.dept span{
+	font-size: 1.1em;
+	font-weight: 100;
+	text-shadow: 1px 1px 5px #000;
+}
+
+.dept button{
+	float: right;
+}
+
+
+/* EMPLOYER */
+
+.empData p{
+	font-size: 1.1em;
+	font-weight: 100;
+}

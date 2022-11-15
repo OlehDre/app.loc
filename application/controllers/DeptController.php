@@ -7,11 +7,18 @@ use application\core\Controller;
 class DeptController extends Controller {
 
     public function createDeptAction() {
-        $this->view->render('Create Dept');
+        if (!empty($_POST)) {
+
+        }
+        $this->view->render('All Dept');
     }
 
     public function showAllDeptAction() {
-        $this->view->render('All Dept');
+        $result = $this->model->getDepts();
+        $vars = [
+            'dept' => $result,
+        ];
+        $this->view->render('All Dept', $vars);
     }
 
     public function deleteDeptAction() {

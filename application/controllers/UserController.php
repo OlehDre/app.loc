@@ -11,7 +11,11 @@
         }
 
         public function showAllUsersAction() {
-            $this->view->render('All Users');
+            $result = $this->model->getUsers();
+            $vars = [
+                'users' => $result,
+            ];
+            $this->view->render('All Users', $vars);
         }
 
         public function showUserAction() {
