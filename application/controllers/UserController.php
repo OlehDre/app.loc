@@ -7,14 +7,14 @@
     class UserController extends Controller {
 
         public function createUserAction() {
-            echo 'Create new user';
+            $this->view->render('Create User');
         }
 
         public function showAllUsersAction() {
-            echo 'Show all users';
+            $this->view->render('All Users');
         }
 
         public function showUserAction() {
-            echo 'Show this user';
+            $this->view->render('User');
         }
     }

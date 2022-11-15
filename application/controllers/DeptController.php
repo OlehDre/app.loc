@@ -7,14 +7,14 @@ use application\core\Controller;
 class DeptController extends Controller {
 
     public function createDeptAction() {
-        echo 'Create new dept';
+        $this->view->render('Create Dept');
     }
 
     public function showAllDeptAction() {
-        echo 'Show all departments';
+        $this->view->render('All Dept');
     }
 
     public function deleteDeptAction() {
-        echo 'Delete this dept';
+        $this->view->render('Delete Dept');
     }
 }
