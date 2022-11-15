@@ -1,33 +1,39 @@
 <?php
 
     return [
+
         'add/user' => [
             'controller' => 'user',
-            'action' => 'create-user',
-            ],
+            'action' => 'createUser',
+        ],
 
         'users' => [
             'controller' => 'user',
-            'action' => 'show-all-users',
+            'action' => 'showAllUsers',
         ],
 
         'user' => [
             'controller' => 'user',
-            'action' => 'show-user',
+            'action' => 'showUser',
         ],
 
         'add/dept' => [
             'controller' => 'dept',
-            'action' => 'create-dept',
+            'action' => 'createDept',
         ],
 
         'delete/dept' => [
             'controller' => 'dept',
-            'action' => 'delete-dept',
+            'action' => 'deleteDept',
         ],
 
         'depts' => [
             'controller' => 'dept',
-            'action' => 'show-all-depts',
+            'action' => 'showAllDept',
+        ],
+
+        '' => [
+            'controller' => 'main',
+            'action' => 'index',
         ],
     ];
