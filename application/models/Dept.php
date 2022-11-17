@@ -11,12 +11,12 @@ class Dept extends Model{
         return $result;
     }
 
-    public function deleteDept(){
-
+    public function deleteDept($data){
+        $this->db->query('DELETE FROM dept WHERE title = (:title)', $data);
     }
 
-    public function createDept(){
-
+    public function createDept($data){
+        $this->db->query('INSERT INTO dept (title) VALUES (:title)', $data);
     }
 
 }

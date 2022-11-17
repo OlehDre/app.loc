@@ -3,6 +3,7 @@
 namespace application\models;
 
 use application\core\Model;
+use PDO;
 
 class User extends Model{
 
@@ -11,13 +12,13 @@ class User extends Model{
         return $result;
     }
 
-    public function getUser(){
-        $result = $this->db->row('SELECT * FROM users WEHERE mail ');
+    public function getUser($data){
+        $result = $this->db->row('SELECT * FROM users WHERE mail = (:mail)', $data);
         return $result;
     }
 
-    public function createUser(){
-
+    public function createUser($data){
+        $this->db->query('INSERT INTO users (mail, name, address, phone, comment, dept) VALUES (:mail, :name, :address, :phone, :comment, :dept)', $data);
     }
 
 }

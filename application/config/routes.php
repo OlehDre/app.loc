@@ -4,6 +4,11 @@
 
         'add/user' => [
             'controller' => 'user',
+            'action' => 'addUser',
+        ],
+
+        'create/user' => [
+            'controller' => 'user',
             'action' => 'createUser',
         ],
 

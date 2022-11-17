@@ -1,13 +1,15 @@
 <div class="container">
-    <h1>ALL EMPLOYERS</h1>
+    <h1>All Users</h1>
     <br>
-    <div class="allEmployers">
+    <div class="allUsers">
         <?php foreach ($users as $val): ?>
-        <a class="employer" href="employer.html">
+        <form action="/user" method="post">
+            <button class="theUser" type="submit">
             <span><?php echo $val['name'] ?></span>
-            <p>Dept: third</p>
-            <p style="display: none;"><?php echo $val['mail'] ?></p>
-        </a>
+            <p>Dept: <?php echo $val['dept'] ?></p>
+            <input type="hidden" name="mail" class="form-control" value=<?php echo $val['mail'] ?> >
+            </button>
+        </form>
         <?php endforeach; ?>
     </div>
 </div>

@@ -1,1 +1,2 @@
-<p>Main page</p>
+<h1>Main page</h1>
+

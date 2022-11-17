@@ -32,7 +32,7 @@ option{
 
 /* ALLEMPLOYERS */
 
-.employer{
+.theUser{
 	display: block;
 	padding: 15px;
 	cursor: pointer;
@@ -40,14 +40,17 @@ option{
 	transition: background .3s ease-out;
 	margin-top: 5px;
 	text-decoration: none;
+	width: 50%;
+	background: #2e2e2e;
+	border: none;
 }
 
-.employer:hover{
-	background: #02dbb7;
+.theUser:hover{
+	background: #666;
 	color: #000;
 }
 
-.employer span{
+.theUser span{
 	font-size: 1.2em;
 	font-weight: bold;
 	text-shadow: 1px 1px 5px #000;
@@ -86,7 +89,7 @@ option{
 
 /* EMPLOYER */
 
-.empData p{
+.userData p{
 	font-size: 1.1em;
 	font-weight: 100;
 }

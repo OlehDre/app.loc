@@ -7,10 +7,9 @@ use application\core\Controller;
 class DeptController extends Controller {
 
     public function createDeptAction() {
-        if (!empty($_POST)) {
-
-        }
-        $this->view->render('All Dept');
+        $data= $_POST;
+        $this->model->createDept($data);
+        $this->view->redirect('/depts');
     }
 
     public function showAllDeptAction() {
@@ -22,6 +21,8 @@ class DeptController extends Controller {
     }
 
     public function deleteDeptAction() {
-        $this->view->render('Delete Dept');
+        $data= $_POST;
+        $this->model->deleteDept($data);
+        $this->view->redirect('/depts');
     }
 }
