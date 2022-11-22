@@ -9,8 +9,14 @@
 
         public function createUserAction() {
             $data = $_POST;
-            $this->model->createUser($data);
-            $this->view->redirect('/add/user');
+            $user = $this->model->getUser(['mail' => $data['mail']]);
+            if($user){
+                echo 'User with that mail already exists';
+                exit();
+            }else{
+                $this->model->createUser($data);
+                $this->view->redirect('/add/user');
+            }
         }
 
         public function addUserAction(){

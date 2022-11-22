@@ -4,19 +4,19 @@
     <form class="formbox" action="/create/user" method="post">
         <div class="mb-3">
             <label for="inputEmail" class="form-label">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" name="mail" aria-describedby="emailHelp">
+            <input type="email" id="inputEmail" class="form-control" name="mail" aria-describedby="emailHelp" placeholder="name@mail.com" required>
         </div>
         <div class="mb-3">
             <label for="inputName" class="form-label">Employer name</label>
-            <input type="text" id="inputName" class="form-control" name="name">
+            <input type="text" id="inputName" class="form-control" name="name" placeholder="Name" required>
         </div>
         <div class="mb-3">
             <label for="inputAddress" class="form-label">Address</label>
-            <input type="text" id="inputAddress" class="form-control" name="address">
+            <input type="text" id="inputAddress" class="form-control" name="address" placeholder="City, street" required>
         </div>
         <div class="mb-3">
             <label for="inputPhone" class="form-label">Phone</label>
-            <input type="text" id="inputPhone" class="form-control" name="phone">
+            <input type="tel" id="inputPhone" class="form-control" name="phone" placeholder="XXX-XXX-XX-XX" required>
         </div>
         <div class="mb-3">
             <label for="inputComment" class="form-label">Comment</label>
@@ -24,7 +24,7 @@
         </div>
         <div class="mb-3">
             <label for="inputDept" class="form-label">Departments</label>
-            <input list="deptList" class="form-control" id="inputDept" name="dept">
+            <input list="deptList" class="form-control" id="inputDept" name="dept" required>
             <datalist id="deptList">
                 <?php if (!empty($dept)) {
                     foreach ($dept as $key): ?>

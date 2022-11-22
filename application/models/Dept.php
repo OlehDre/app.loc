@@ -4,18 +4,26 @@ namespace application\models;
 
 use application\core\Model;
 
-class Dept extends Model{
+class Dept extends Model
+{
 
-    public function getDepts(){
+    public function getDepts()
+    {
         return $this->db->row('SELECT * FROM dept');
     }
 
-    public function deleteDept($data){
+    public function deleteDept($data)
+    {
         $this->db->query('DELETE FROM dept WHERE title = (:title)', $data);
     }
 
-    public function createDept($data){
+    public function createDept($data)
+    {
         $this->db->query('INSERT INTO dept (title) VALUES (:title)', $data);
     }
 
+    public function searchDept($data)
+    {
+        return $this->db->row('SELECT * FROM dept WHERE title = (:title)', $data);
+    }
 }

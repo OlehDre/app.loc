@@ -20,7 +20,7 @@
     <form class="deptForm" action="/add/dept" method="post">
         <div class="mb-3">
             <label for="inputTitle" class="form-label">Dept Title</label>
-            <input type="text" id="inputTitle" class="form-control" name="title">
+            <input type="text" id="inputTitle" class="form-control" name="title" placeholder="Title" required>
         </div>
         <button type="submit" class="btn btn-success">CREATE</button>
     </form>
