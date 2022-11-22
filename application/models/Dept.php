@@ -7,8 +7,7 @@ use application\core\Model;
 class Dept extends Model{
 
     public function getDepts(){
-        $result = $this->db->row('SELECT * FROM dept');
-        return $result;
+        return $this->db->row('SELECT * FROM dept');
     }
 
     public function deleteDept($data){

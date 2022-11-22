@@ -26,9 +26,13 @@
             <label for="inputDept" class="form-label">Departments</label>
             <input list="deptList" class="form-control" id="inputDept" name="dept">
             <datalist id="deptList">
-                <?php foreach ($dept as $key): ?>
-                    <option><?php echo $key['title']; ?></option>
-                <?php endforeach; ?>
+                <?php if (!empty($dept)) {
+                    foreach ($dept as $key): ?>
+                        <option><?php echo $key['title']; ?></option>
+                    <?php endforeach;
+                } else {
+                    echo 'Add dept to Data base';
+                } ?>
             </datalist>
         </div>
         <button type="submit" class="btn btn-primary">Create</button>

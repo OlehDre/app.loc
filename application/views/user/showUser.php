@@ -1,5 +1,6 @@
 <div class="container">
-    <?php foreach ($user as $val):?>
+    <?php if (!empty($user)){
+    foreach ($user as $val):?>
     <div class="userData">
         <h1 class="userName"><?php echo $val['name'] ?></h1>
         <br>
@@ -8,6 +9,9 @@
         <p class="userPhone">Phone: <?php echo $val['phone'] ?></p>
         <p class="userComments">Comments: <?php echo $val['comment'] ?></p>
         <p class="userDept">Dept: <?php echo $val['dept'] ?></p>
-        <?php endforeach; ?>
+        <?php endforeach;
+        } else{
+            echo 'Can not find user';
+        } ?>
     </div>
 </div>

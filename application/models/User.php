@@ -8,13 +8,11 @@ use PDO;
 class User extends Model{
 
     public function getUsers(){
-        $result = $this->db->row('SELECT * FROM users');
-        return $result;
+        return $this->db->row('SELECT * FROM users');
     }
 
     public function getUser($data){
-        $result = $this->db->row('SELECT * FROM users WHERE mail = (:mail)', $data);
-        return $result;
+        return $this->db->row('SELECT * FROM users WHERE mail = (:mail)', $data);
     }
 
     public function createUser($data){
