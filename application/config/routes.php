@@ -7,11 +7,6 @@
             'action' => 'addUser',
         ],
 
-        'create/user' => [
-            'controller' => 'user',
-            'action' => 'createUser',
-        ],
-
         'users' => [
             'controller' => 'user',
             'action' => 'showAllUsers',
@@ -20,11 +15,6 @@
         'user' => [
             'controller' => 'user',
             'action' => 'showUser',
-        ],
-
-        'add/dept' => [
-            'controller' => 'dept',
-            'action' => 'createDept',
         ],
 
         'delete/dept' => [

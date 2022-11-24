@@ -24,8 +24,7 @@
         </div>
         <div class="mb-3">
             <label for="inputDept" class="form-label">Departments</label>
-            <input list="deptList" class="form-control" id="inputDept" name="dept" required>
-            <datalist id="deptList">
+            <select class="form-select" id="inputDept" name="dept" required>
                 <?php if (!empty($dept)) {
                     foreach ($dept as $key): ?>
                         <option><?php echo $key['title']; ?></option>
@@ -33,7 +32,7 @@
                 } else {
                     echo 'Add dept to Data base';
                 } ?>
-            </datalist>
+            </select>
         </div>
         <?php if (!empty($error)) { ?>
             <p class="warning"><?php echo $error; ?></p>

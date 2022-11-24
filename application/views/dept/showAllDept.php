@@ -20,7 +20,7 @@
     <form class="deptForm" action="/depts" method="post">
         <div class="mb-3">
             <label for="inputTitle" class="form-label">Dept Title</label>
-            <input type="text" id="inputTitle" class="form-control" name="title" placeholder="Title" required>
+            <input type="text" id="inputTitle" class="form-control" name="title" placeholder="Title" required pattern="^\S+(.\S)*">
         </div>
         <?php if (!empty($error)) { ?>
             <p class="warning"><?php echo $error; ?></p>
