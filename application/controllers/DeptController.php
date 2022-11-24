@@ -8,12 +8,22 @@ class DeptController extends Controller {
 
     public function createDeptAction() {
         $data= $_POST;
-        if($data['title'] == ' '){
-            echo 'Enter valid title';
-            exit();
+        if($data['title'] == ' ' || $data['title'] == '  '){
+            $error = 'Enter valid title';
+            $result = $this->model->getDepts();
+            $vars = [
+                'dept' => $result,
+                'error' => $error,
+            ];
+            $this->view->render('All Dept', $vars);
         }elseif (($this->model->searchDept($data))){
-            echo 'Department with that title already exists';
-            exit();
+            $error = 'Department with that title already exists';
+            $result = $this->model->getDepts();
+            $vars = [
+                'dept' => $result,
+                'error' => $error,
+            ];
+            $this->view->render('All Dept', $vars);
         }else {
             $this->model->createDept($data);
             $this->view->redirect('/depts');

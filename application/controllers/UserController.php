@@ -11,8 +11,13 @@
             $data = $_POST;
             $user = $this->model->getUser(['mail' => $data['mail']]);
             if($user){
-                echo 'User with that mail already exists';
-                exit();
+                $error = 'User with that mail already exists';
+                $depts = (new Dept)->getDepts();
+                $var = [
+                    'dept' => $depts,
+                    'error' => $error,
+                ];
+                $this->view->render('Create User', $var);
             }else{
                 $this->model->createUser($data);
                 $this->view->redirect('/add/user');
