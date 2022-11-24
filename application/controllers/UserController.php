@@ -7,29 +7,28 @@
 
     class UserController extends Controller {
 
-        public function createUserAction() {
-            $data = $_POST;
-            $user = $this->model->getUser(['mail' => $data['mail']]);
-            if($user){
-                $error = 'User with that mail already exists';
-                $depts = (new Dept)->getDepts();
-                $var = [
-                    'dept' => $depts,
-                    'error' => $error,
-                ];
-                $this->view->render('Create User', $var);
-            }else{
-                $this->model->createUser($data);
-                $this->view->redirect('/add/user');
-            }
-        }
-
         public function addUserAction(){
             $depts = (new Dept)->getDepts();
-            $var = [
-                'dept' => $depts,
-            ];
-            $this->view->render('Create User', $var);
+            $data = $_POST;
+            if (!empty($data)){
+                $user = $this->model->getUser(['mail' => $data['mail']]);
+                if($user){
+                    $error = 'User with that mail already exists';
+                    $var = [
+                        'dept' => $depts,
+                        'error' => $error,
+                    ];
+                    $this->view->render('Create User', $var);
+                }else{
+                    $this->model->createUser($data);
+                    $this->view->redirect('/add/user');
+                }
+            }else {
+                $var = [
+                    'dept' => $depts,
+                ];
+                $this->view->render('Create User', $var);
+            }
         }
 
         public function showAllUsersAction() {

@@ -17,11 +17,14 @@
         } ?>
     </div><br><br>
 
-    <form class="deptForm" action="add/dept" method="post">
+    <form class="deptForm" action="/depts" method="post">
         <div class="mb-3">
             <label for="inputTitle" class="form-label">Dept Title</label>
             <input type="text" id="inputTitle" class="form-control" name="title" placeholder="Title" required>
         </div>
+        <?php if (!empty($error)) { ?>
+            <p class="warning"><?php echo $error; ?></p>
+        <?php } ?>
         <button type="submit" class="btn btn-success">CREATE</button>
     </form>
 

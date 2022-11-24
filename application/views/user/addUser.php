@@ -1,7 +1,7 @@
 <div class="container">
     <h1>Add New User</h1>
     <br><br>
-    <form class="formbox" action="/create/user" method="post">
+    <form class="formbox" action="/add/user" method="post">
         <div class="mb-3">
             <label for="inputEmail" class="form-label">Email address</label>
             <input type="email" id="inputEmail" class="form-control" name="mail" aria-describedby="emailHelp" placeholder="name@mail.com" required>
@@ -35,6 +35,9 @@
                 } ?>
             </datalist>
         </div>
+        <?php if (!empty($error)) { ?>
+            <p class="warning"><?php echo $error; ?></p>
+        <?php } ?>
         <button type="submit" class="btn btn-primary">Create</button>
     </form>
 </div>
