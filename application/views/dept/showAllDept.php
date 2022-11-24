@@ -5,7 +5,7 @@
         <?php if (!empty($dept)) {
             foreach ($dept as $val): ?>
                 <div class="dept">
-                    <form action="/delete/dept" method="post">
+                    <form action="delete/dept" method="post">
                         <span><?php echo $val['title'] ?></span>
                         <input type="hidden" class="form-control" name="title" value=<?php echo $val['title'] ?>>
                         <button type="submit" class="btn btn-outline-danger">DELETE</button>
@@ -17,7 +17,7 @@
         } ?>
     </div><br><br>
 
-    <form class="deptForm" action="/add/dept" method="post">
+    <form class="deptForm" action="add/dept" method="post">
         <div class="mb-3">
             <label for="inputTitle" class="form-label">Dept Title</label>
             <input type="text" id="inputTitle" class="form-control" name="title" placeholder="Title" required>
